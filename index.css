@@ -1,0 +1,195 @@
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+}
+
+body, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body{
+  display: flex;
+    flex-direction: column;
+    background-image: url('img-referencias/planet-earth-background\ \(1\).jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    padding: 1rem;
+    gap: 4rem;
+    min-height: 100vh;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    gap: 1rem;
+    padding: 0.5rem;
+    min-height: 70%;
+    font-size: 14px;
+    position: fixed;
+    height: 70%;
+    overflow-y: scroll;
+    right: 0;
+    left: 0;
+}
+#container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#container::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0284c7, #e0f2fe) ;
+  border-radius: 100vw;
+}
+
+/* size banderas */
+li{
+  background: rgba(0, 0, 0, 1);
+  padding: 0.3rem;
+  border: groove;
+  box-shadow: 0 0 20px #a5f3fc;
+}
+
+p{
+  color:#0891b2 ;
+  font-weight: 600;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* imagen de banderas */
+li > img {
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.imagen{
+  width: 2rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+ul{
+  list-style: none;
+  line-height: 2.5rem;
+  overflow: hidden;
+  width: 16rem;
+}
+.infoClimaPais {
+  color: white;
+  font-size: 1rem
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 1px solid white;
+  padding-bottom: 2rem;
+ 
+}
+#search{
+  width: 15rem;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  box-shadow: 0 0 20px #0284c7;
+  font-size: 14px;
+}
+
+.title{
+  color: white;
+  font-size: 2rem;
+}
+
+.info{
+  color: white;
+  font-size: 1rem;
+  align-items: center;
+  display: none;
+  font-size: 12px;
+}
+
+.info-pais{
+  color: white;
+  font-size: 1rem;
+  font-size: 14px;
+}
+.a {
+  color: white;
+        font-size: 14px;
+        font-weight: 700;
+        display: flex;
+        position: absolute;
+        top: 0rem;
+}
+/* loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 768px){
+  p{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  #search{
+    width: 15rem;
+    font-size: 16px;
+  }
+  .info-pais{
+    font-size: 16px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .a {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+
+  }
+}
